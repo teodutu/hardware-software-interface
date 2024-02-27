@@ -88,7 +88,9 @@ A byte consists of two such characters, so each character corresponds to a group
 
 #### Example: Conversion of the number 0xD9B1 to decimal
 
-$$ \texttt{0xD9B1} = 1 \cdot 16 ^ 0 + 11 \cdot 16 ^ 1 + 9 \cdot 16 ^ 2 + 13 \cdot 16 ^ 3 = 55729 $$
+$$
+\texttt{0xD9B1} = 1 \cdot 16 ^ 0 + 11 \cdot 16 ^ 1 + 9 \cdot 16 ^ 2 + 13 \cdot 16 ^ 3 = 55729
+$$
 
 ### Conversion between Binary and Hexadecimal
 
@@ -138,7 +140,6 @@ The table below shows the sizes of data types on a 32-bit processor.
 | `size_t`    | 32             | 4               |
 | `long`      | 32             | 4               |
 | `long long` | 64             | 8               |
-
 | pointer     | 32             | 4               |
 
 On a 64-bit machine, the table above still holds true except for the types below.
