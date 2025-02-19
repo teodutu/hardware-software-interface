@@ -15,34 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: ./repo
+          path: ./${{ github.event.number }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
-      - run: |
-          cd repo
-          REF=$(echo ${{ github.event.number }} | sed 's/\//\\\//g')
-          echo "baseurl: /hardware-software-interface/$REF/" >> _config.yaml
+      - name: Install dependencies
+        run: bundle install
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: ./repo
-          file: ./repo/Dockerfile
-          push: false
-          load: true
-          tags: hardware-software-interface-${{ github.event.number }}:latest
-          cache-from: type=gha
-          cache-to: type=gha
-
-      - name: Load Image
-        run: |
-          mkdir -p ${{ github.event.number }}
-          docker image list
-          docker run -v $GITHUB_WORKSPACE/repo:/usr/src/app hardware-software-interface-${{ github.event.number }}:latest
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
