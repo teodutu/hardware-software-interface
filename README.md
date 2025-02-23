@@ -14,6 +14,8 @@ nav_order: 1
 
 ## Content
 
+- this is a test line
+
 The contents are open educational resources ([OER](https://en.wikipedia.org/wiki/Open_educational_resources)), part of the [Open Education Hub project](https://open-education-hub.github.io/);
 they are hosted on [GitHub](https://github.com/cs-pub-ro/hardware-software-interface), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause).
 
