@@ -5,6 +5,8 @@ has_children: false
 
 # Rules and Grading
 
+You can find the year planning [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSwkKeXjf0U75qXXOE10f3PR8D-niNCqEFBs3fHj5MTGqHtT08LIBa9msE_dOAYJ3RkvFXTXWmL4CP1/pubhtml?gid=0&single=true).
+
 ## Grading
 
 To pass this course you need to obtain **5 points** from a total of **10 points**:
